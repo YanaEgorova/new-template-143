@@ -13,7 +13,7 @@
 
 
   <div class="wrapper">
-    <div class="header__wrapper">
+  <div class="header__wrapper">
       <div class="container">
         <header class="header">
 
@@ -45,30 +45,31 @@
             </svg>
             <span class="cart__span js_cart__span">0</span>
           </a>  
-          <nav class="nav js_menu">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="./contacts.html" class="nav__link">Contact Us</a>
-              </li>
-              <li class="nav__item">
-                <a href="./privacy.html" class="nav__link">Privacy Notice</a>
-              </li>
-              <li class="nav__item">
-                <a href="./purchase.html" class="nav__link">Terms of Purchase</a>
-              </li>
-              <li class="nav__item">
-                <a href="./return.html" class="nav__link">Return Policy</a>
-              </li>
-              <li class="nav__item">
-                <a href="./shipping.html" class="nav__link">Shipping Policy</a>
-              </li>
-              <li class="nav__item">
-                <a href="./use.html" class="nav__link">Terms of Use</a>
-              </li>
-            </ul>
-          </nav>
+        
         </header>
       </div>
+      <nav class="nav js_menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./contacts.html" class="nav__link">Contact Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="./privacy.html" class="nav__link">Privacy Notice</a>
+          </li>
+          <li class="nav__item">
+            <a href="./purchase.html" class="nav__link">Terms of Purchase</a>
+          </li>
+          <li class="nav__item">
+            <a href="./return.html" class="nav__link">Return Policy</a>
+          </li>
+          <li class="nav__item">
+            <a href="./shipping.html" class="nav__link">Shipping Policy</a>
+          </li>
+          <li class="nav__item">
+            <a href="./use.html" class="nav__link">Terms of Use</a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <main class="main bg-main">
@@ -78,6 +79,9 @@
               <div class="block">
                 <h1 class="title">Thank you</h1>
                 <p class="text">Your order was completed successfully!</p>
+                <?php if($_GET["order_id"]){ ?> 
+      <p class="text" style="font-size: 3rem">Your Order ID is: <?php echo htmlspecialchars($_GET["order_id"]); ?></p>
+    <?php } ?>
               </div>
           </div>
         </section>
